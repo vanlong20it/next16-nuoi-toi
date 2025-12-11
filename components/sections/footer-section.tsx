@@ -16,7 +16,7 @@ export function FooterSection() {
           <AlertCircle className="w-4 h-4" />
           <p>Đây chỉ là trang web với mục đích giải trí, không có công kích tới bất kì tổ chức hay cá nhân nào</p>
         </div>
-        <p>© {new Date().getFullYear()} Nuôi Tôi Đi. All content is for fun.</p>
+        <p>© {new Date().getFullYear()} Nuôi Long Đi. All content is for fun.</p>
       </motion.div>
     </footer>
   );

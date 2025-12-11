@@ -46,7 +46,7 @@ export function HeroSection() {
         variants={itemVariants}
         className="text-6xl md:text-8xl font-bold mb-6 bg-clip-text text-transparent bg-linear-to-r from-pink-500 via-purple-500 to-indigo-500 animate-gradient-x p-2 pb-4"
       >
-        Nuôi Tôi Đi <br />
+        Nuôi Long Đi <br />
         <span className="text-4xl md:text-6xl text-gray-400 block mt-4">Ví tui đói lắm rồi!</span>
       </motion.h1>
 

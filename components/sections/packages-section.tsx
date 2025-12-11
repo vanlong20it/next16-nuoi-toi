@@ -77,7 +77,7 @@ export function PackagesSection() {
               </div>
             </div>
             <div className="text-center text-sm text-gray-500">
-              Cảm ơn bạn đã nuôi tôi hôm nay! ❤️
+              Cảm ơn bạn đã nuôi Long hôm nay! ❤️
             </div>
           </DialogContent>
         </Dialog>
