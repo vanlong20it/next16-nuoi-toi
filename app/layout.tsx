@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Comfortaa, Geist, Geist_Mono, Playfair_Display, Playfair_Display_SC } from "next/font/google";
 import "./globals.css";
+import MouseCustom from "@/components/mouse-custom";
 
 const geistSans = Comfortaa({
   variable: "--font-geist-sans",
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <MouseCustom />
         {children}
       </body>
     </html>
