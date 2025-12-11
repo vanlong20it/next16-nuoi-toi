@@ -63,7 +63,7 @@ export function TimelineSection() {
                 </div>
                 <div>
                   <span className="text-xs font-mono text-gray-400 block">{event.time}</span>
-                  <h3 className="text-xl font-bold text-white">{event.title}</h3>
+                  <h3 className="text-xl font-bold text-white mt-2">{event.title}</h3>
                 </div>
               </div>
               <p className="text-gray-300 ml-14">{event.description}</p>
