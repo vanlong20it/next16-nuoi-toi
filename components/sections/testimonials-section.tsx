@@ -45,7 +45,7 @@ export function TestimonialsSection() {
               </Avatar>
               <div>
                 <CardTitle className="text-base">{t.name}</CardTitle>
-                <CardDescription className="text-xs">{t.role}</CardDescription>
+                <CardDescription className="text-xs mt-1">{t.role}</CardDescription>
               </div>
             </CardHeader>
             <CardContent className="text-sm text-gray-400 italic relative">

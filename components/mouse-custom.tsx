@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { Zap, Code, Hash, Terminal, Cpu, Globe, Activity, Aperture } from 'lucide-react';
 
 const MouseCustom = () => {
   const cursorX = useMotionValue(-100);
@@ -11,16 +12,29 @@ const MouseCustom = () => {
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
 
-  const [binaryGrid, setBinaryGrid] = useState<{ val: string; visible: boolean }[]>([]);
+  const [binaryGrid, setBinaryGrid] = useState<{ content: React.ReactNode; visible: boolean }[]>([]);
 
   useEffect(() => {
     const moveCursor = (e: MouseEvent) => {
       cursorX.set(e.clientX);
       cursorY.set(e.clientY);
-      const newGrid = Array.from({ length: 16 }, () => ({
-        val: Math.floor((Math.random() * 10)).toString(), // Numbers 0-9
-        visible: Math.random() > 0.5
-      }));
+
+      const items: (string | React.ReactElement)[] = [
+        '🥲', '😍', '🥰', '😘', '💖', '💕', '😀', '😁', '😂',
+      ];
+
+      const newGrid = Array.from({ length: 16 }, (_, index) => {
+        const randomItem = items[Math.floor(Math.random() * items.length)];
+        // If it's a react element, clone it with a unique key to satisfy React key requirements in arrays if needed,
+        // though here we are putting it in an object `content`.
+        // Actually, just passing the element is fine, but keys might be an issue if we were rendering an array of elements directly.
+        // Here we render inside a map: {item.content}
+
+        return {
+          content: randomItem,
+          visible: Math.random() > 0.5
+        };
+      });
 
       // Enforce constraint: at least 50% (8 items) must be visible
       const visibleCount = newGrid.filter(item => item.visible).length;
@@ -46,7 +60,7 @@ const MouseCustom = () => {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 pointer-events-none z-50 mix-blend-normal flex items-center justify-center"
+      className="fixed hidden lg:flex top-0 left-0 pointer-events-none z-50 mix-blend-normal items-center justify-center"
       style={{
         x: cursorXSpring,
         y: cursorYSpring,
@@ -62,9 +76,9 @@ const MouseCustom = () => {
           {binaryGrid.map((item, i) => (
             <span
               key={i}
-              className={`text-xl leading-none bg-black font-mono font-bold size-10 text-center block text-white transition-opacity duration-75 ${item.visible ? 'opacity-100' : 'opacity-0'}`}
+              className={`text-xl leading-none bg-white font-mono font-bold size-10 flex items-center justify-center text-white transition-opacity duration-75 ${item.visible ? 'opacity-100' : 'opacity-0'}`}
             >
-              {item.val}
+              {item.content}
             </span>
           ))}
         </div>

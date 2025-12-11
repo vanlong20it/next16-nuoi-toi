@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     question: "Web này có lừa đảo không?",
-    answer: "Không hề. Tôi lừa tình cảm chứ không lừa tiền (vì làm gì có ai cho mà lừa)."
+    answer: "Không hề. Bạn đừng đánh giá tôi cao vậy chứ (vì làm gì có ai cho mà lừa)."
   }
 ];
 
