@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useEffect } from "react";
 
 export const InteractiveBackground = () => {
   const mouseX = useMotionValue(0);

@@ -1,9 +1,8 @@
 'use client';
 
-import React, { useRef, useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Play, RotateCcw, Trophy } from 'lucide-react';
-import { cn } from '@/lib/utils'; // Assuming you have a utils file, or remove if not
+import { useEffect, useRef, useState } from 'react';
 
 // --- constants ---
 const COLS = 30; // Increased resolution

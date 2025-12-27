@@ -1,7 +1,6 @@
 "use client";
 
 import { InteractiveBackground } from "@/components/interactive-background";
-import MouseCustom from "@/components/mouse-custom";
 import { BenefitsSection } from "@/components/sections/benefits-section";
 import { FAQSection } from "@/components/sections/faq-section";
 import { FooterSection } from "@/components/sections/footer-section";

@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
-import { Zap, Code, Hash, Terminal, Cpu, Globe, Activity, Aperture } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 
 const MouseCustom = () => {
   const cursorX = useMotionValue(-100);
