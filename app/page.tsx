@@ -1,6 +1,7 @@
 "use client";
 
 import { InteractiveBackground } from "@/components/interactive-background";
+import MouseCustom from "@/components/mouse-custom";
 import { BenefitsSection } from "@/components/sections/benefits-section";
 import { FAQSection } from "@/components/sections/faq-section";
 import { FooterSection } from "@/components/sections/footer-section";
@@ -9,6 +10,7 @@ import { PackagesSection } from "@/components/sections/packages-section";
 import { StorySection } from "@/components/sections/story-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { TimelineSection } from "@/components/sections/timeline-section";
+import { SmoothScroll } from "@/components/smooth-scroll";
 import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
@@ -31,6 +33,8 @@ export default function Home() {
         <TestimonialsSection />
         <FooterSection />
       </main>
+      {/* <MouseCustom /> */}
+      <SmoothScroll />
     </div>
   );
 }
